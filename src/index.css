@@ -81,8 +81,6 @@ button:focus-visible {
   height: 250px;
   width: 250px;
   background-color: blue;
-  margin: 20px;
-  padding: 10px;
   border-radius: 15px;
   cursor: pointer;
   transition: background-color 0.25s;
@@ -92,3 +90,8 @@ button:focus-visible {
   background-color: rgb(58, 58, 105);
 }
   
+img {
+  height: 250px;
+  width: 250px;
+  border-radius: 15px;
+}
