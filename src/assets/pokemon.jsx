@@ -10,7 +10,6 @@ async function fetchPokeMons (arrId) {
     try{
         const promises = await arrId.map((id) => pokeMon(id))
         const arrOfPokeMons = await Promise.all(promises);
-        // console.log(arrOfPokeMons)
         return arrOfPokeMons
     }
     catch(error){

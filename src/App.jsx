@@ -28,9 +28,9 @@ function App() {
       setCurrentScore(currentScore => currentScore + 1);
       if ((currentScore + 1) > bestScore){
         setBestScore(currentScore+1)
+      }
     }
-    }
-  
+    setPokemon(shuffleArray)
   }
 
   useEffect(()=>{
@@ -39,9 +39,14 @@ function App() {
     fetchedPokeMons.then(result=> setPokemon(result))
   },[])
 
-  // console.log(pokemon, typeof(pokemon))
-  console.log(clicked)
-  
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
   return (
     <>
       <Header/>
