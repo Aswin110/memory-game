@@ -10,7 +10,7 @@ function App() {
   let [pokemon, setPokemon] = useState([])
   let [clicked, setClicked] = useState([])
 
-  function addCurrentScore (e) {
+  function gamePlay (e) {
     //win
     if (clicked.length === 11 ) {
       alert('you have won!!!!')
@@ -56,7 +56,7 @@ function App() {
         
       />
       <Cards
-        addCurrentScore = {addCurrentScore}
+        gamePlay = {gamePlay}
         pokemon = {pokemon}
       />
     </>
